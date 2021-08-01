@@ -415,8 +415,9 @@ img{
     margin-right: var(--mb-4);
   }
   .home__img{
-    width: 457px;
-    bottom: 25%;
+    /* width: 457px; */
+    /* bottom: 25%; */
+    bottom: 10%;
   }
 
   .about__container, .skills__container{
@@ -448,5 +449,13 @@ img{
   .home__img{
     /* right: 10%; */
     right: 5%;
+  }
+}
+@media screen and (max-width: 570px){
+  .home__img{
+    position: absolute;
+    right: 5%;
+    bottom: 10%;
+    width: 190px;
   }
 }
