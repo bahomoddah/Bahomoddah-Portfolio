@@ -4,7 +4,8 @@ self.addEventListener("install", e => {
         caches.open("static").then(cache => {
             return cache.addAll(["./", "./assets/css/styles.css", "./assets/js/main.js", "./assets/img/logo.png", "./assets/img/logo + bg short.png"])
         })
-    )
+    );
+    return self.clients.claim();
 })
 
 self.addEventListener("fetch", e => {
