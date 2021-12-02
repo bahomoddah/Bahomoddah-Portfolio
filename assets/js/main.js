@@ -57,5 +57,16 @@ sr.reveal('.work__img',{interval: 200});
 sr.reveal('.contact__input',{interval: 200}); 
 
 
+/* For PWA */
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("sw.js").then(registration => {
+        console.log("SW Registered");
+        console.log(registration);
+    }).catch(error => {
+        console.log("SW Registration Faild");
+        console.log(error);
+    })
+    
+}
 
 
